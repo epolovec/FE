@@ -1,11 +1,14 @@
 import './App.css';
+import 'react-pro-sidebar/dist/css/styles.css';
+import Sidebar from './Components/Sidebar';
 
 function App() {
   return (
     <div className="App">
-      <h1>Test1</h1>
+      <Sidebar />
     </div>
   );
 }
+
 
 export default App;
