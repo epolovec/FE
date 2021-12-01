@@ -1,6 +1,6 @@
 .App {
-  width: 100vw;
   height: 100vh;
+  display: flex;
 }
 
 body{
@@ -17,6 +17,10 @@ body{
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
   }
+}
+
+.container {
+  display: flex;
 }
 
 .App-header {
