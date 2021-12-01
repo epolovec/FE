@@ -1,5 +1,4 @@
 import './App.css';
-import 'react-pro-sidebar/dist/css/styles.css';
 import Sidebar from './Components/Sidebar';
 
 function App() {
