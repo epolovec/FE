@@ -1,8 +1,8 @@
 import React from 'react';
-import '../App.css';
-import '../Components/Sidebar.css';
-import {SidebarData} from './SidebarData'
-import Shift4Logo from '../Shift4-Payments-for-dark.svg'
+import '../../App.css';
+import '../Sidebar/Sidebar.css';
+import {SidebarData} from '../Sidebar/SidebarData'
+import Shift4Logo from '../../Shift4-Payments-for-dark.svg'
 
 function Sidebar() {
     return (
