@@ -1,6 +1,10 @@
 .App {
   height: 100vh;
   display: flex;
+  margin: 0;
+}
+#root {
+  margin: 0;
 }
 
 body{
@@ -20,7 +24,10 @@ body{
 }
 
 .container {
-  display: flex;
+  display:inline-block;
+  margin: 0;
+  padding: 0;
+  width: 100%;
 }
 
 .App-header {
