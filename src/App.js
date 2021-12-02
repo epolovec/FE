@@ -7,7 +7,6 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 function App() {
   return (
-    <div className='container'>
     <div className="App">
       <Sidebar />
       <Router>
@@ -18,7 +17,6 @@ function App() {
           <Route path = '/scheduled-calls' element={<ScheduledCalls />} />
         </Routes>
       </Router>
-    </div>
     </div>
   );
 }
