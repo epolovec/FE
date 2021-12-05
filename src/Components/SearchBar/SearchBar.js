@@ -1,42 +1,24 @@
-import React, { useState} from 'react';
+import '../../App.css';
+import JSONDATA from './Data.json';
+import {useState} from 'react';
 import './SearchBar.css'
-
-
-function SearchBar({placeholder, data}) {
-    const [filteredData, setFilteredData] = useState([]);
-
-    const handleFilter = (event) => {
-        const searchWord = event.target.value
-        const newFilter = data.filter((value) => {
-            return value.title.includes(searchWord)
-        });
-        setFilteredData(newFilter);
-    }
+function SearchBar() {
+    const [searchTerm, setSearchTerm] = useState('')
     return (
-        <div class='search'>
-            <div className="searchInputs">
-                
-                <input type="text" placeholder={placeholder} onChange={handleFilter}/>
-                <div className='searchIcon'><button type="submit" className='searchbutton'>Search</button>
-                </div>
-                </div>
-                {filteredData.length !== 0 && (
-                <div className="dataResult">
-                    {filteredData.map((value,key)=> {
-                        return (
-                            <a className='dataItem' href={value.link} target='_blank' rel="noreferrer">
-                                <p>{value.title}</p>
-                            </a>
-                        );
-                    })}
-                    
-                </div>
-                
-                )}
-              
+        <div class='search'><div class='searchInputs'>
+            <input type="text" placeholder="Search..." onChange={event => {setSearchTerm(event.target.value)}}/>
+            <div className='searchIcon'><button type="submit" className='searchbutton'>Search</button>
+                </div></div>
+            
+            {JSONDATA.filter((val)=> {
+                if(searchTerm === ""){
+                }else if (val.MID.toLowerCase().includes(searchTerm.toLowerCase())){
+                    return val
+                }
+            }).map((val,key)=>{
+        return <div className="user" key={key}> <p className="dropDown">{val.MID}</p> </div>
+      })}
         </div>
-        
-    );
+    )
 }
-
-export default SearchBar
+export default SearchBar;

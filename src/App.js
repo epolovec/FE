@@ -5,10 +5,11 @@ import MyTickets from './Components/MyTickets/MyTickets';
 import ScheduledCalls from './Components/ScheduledCalls/ScheduledCalls'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import CreateTicket from './Components/CreateTickets/CreateTickets';
-import '../src/Components/SearchBar/Data.json'
+
+
 function App() {
   return (
-    <div className='container'>
+
     <div className="App">
       <Sidebar />
       <Router>
@@ -20,7 +21,7 @@ function App() {
           <Route path = '/create-tickets' element={<CreateTicket />} />
         </Routes>
       </Router>
-    </div>
+
     </div>
   );
 }

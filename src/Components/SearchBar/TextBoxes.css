@@ -2,10 +2,20 @@
 
 input#outlined-basic {
     background-color: white;
-    width: 307px;
+    width: 235px;
     height:10px;
     
 }
 .textBox {
     padding-left: 100px;
+}
+.textInfo{
+    height: 41px;
+    width: 70px;
+    background-color:gray; /* Green */
+    border: none;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    cursor:default;
 }

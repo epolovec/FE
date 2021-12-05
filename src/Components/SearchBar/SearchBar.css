@@ -47,3 +47,9 @@ input{
     cursor: pointer;
 
 }
+.dropDown {
+    background-color: white;
+    padding: 0px;
+    margin: 0px;
+    width: 600px;
+}
