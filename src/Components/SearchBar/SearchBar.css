@@ -30,13 +30,13 @@ input{
     font-size: 18px;
     padding: 15px;
     height: 45px;
-    width: 600px;
+    width: 630px;
   }
   
   
 .searchbutton {
     height: 45px;
-    width: 70px;
+    width: 100px;
     background-color: #3179e6; /* Green */
     border: none;
     color: white;
