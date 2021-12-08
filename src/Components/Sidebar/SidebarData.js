@@ -13,6 +13,10 @@ export const SidebarData = [
         title: 'Scheduled calls',
         link: '/scheduled-calls'
     },
+    {
+        title: 'Test form',
+        link: '/test-form'
+    },
 
 ];
 
