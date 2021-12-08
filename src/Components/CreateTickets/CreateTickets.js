@@ -10,21 +10,26 @@ import { getDatabase, ref, set } from "firebase/database";
 function CreateTicket() {
 
     const [name , setName] = useState();
-    const [age , setAge] = useState();
+    const [position , setPosition] = useState();
+    const [email , setEmail] = useState();
+    const [phoneNumber , setPhoneNumber] = useState();
 
     function writeTicket() {
         const db = getDatabase();
         set(ref(db, 'users/' ), {
           name: name,
-          age: age,
+          position: position,
+          email: email,
+          phoneNumber: phoneNumber,
         });
       }
 
+    //funckija kuri atnaujina state pav
     return (
         <div class='CreateTickets'>
             <SearchBar placeholder="Enter customer search string" />
             <form onSubmit={writeTicket}>
-            <TextBoxes />
+            <TextBoxes onUpdate={writeTicket}/>
             <Forms />
             <button type='submit'>Submit</button>
             </form>

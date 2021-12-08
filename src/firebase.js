@@ -1,9 +1,6 @@
 import { initializeApp } from 'firebase/app';
 import { getDatabase } from "firebase/database";
 
-
-
-
 // Your web app's Firebase configuration
 const firebaseConfig = {
   apiKey: "AIzaSyAfcW7nPFr_Ve5jZ-F0BaK12H7z3g78u1w",
@@ -19,8 +16,5 @@ const firebaseConfig = {
 
 const app = initializeApp(firebaseConfig);
 const database = getDatabase();
-
-// firebase.initializeApp(firebaseConfig);
-// var database = firebase.database();
   
 export default app;
