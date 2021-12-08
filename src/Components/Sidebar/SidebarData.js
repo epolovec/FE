@@ -1,4 +1,3 @@
-import React from 'react'
 
 export const SidebarData = [
     {
@@ -12,6 +11,10 @@ export const SidebarData = [
     {
         title: 'Scheduled calls',
         link: '/scheduled-calls'
+    },
+    {
+        title: 'Create Tickets',
+        link: '/create-tickets'
     },
 
 ];
