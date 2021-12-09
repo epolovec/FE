@@ -10,12 +10,6 @@ import Forms from '../SearchBar/Forms';
 function CreateTicket() {
     const _ = require("lodash");
 
-    const [name , setName] = useState();
-    const [position , setPosition] = useState();
-    const [email , setEmail] = useState();
-    const [phoneNumber , setPhoneNumber] = useState();
-
-    function writeTicket() {
     const [data, setData] = useState({
       name: "",
       position: "",
