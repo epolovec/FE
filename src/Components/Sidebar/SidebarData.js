@@ -1,4 +1,3 @@
-
 export const SidebarData = [
     {
         title: 'All tickets',
@@ -15,10 +14,6 @@ export const SidebarData = [
     {
         title: 'Create Tickets',
         link: '/create-tickets'
-    },
-    {
-        title: 'Test form',
-        link: '/test-form'
     },
 ];
 
