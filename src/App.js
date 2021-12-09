@@ -2,7 +2,7 @@ import './App.css';
 import Sidebar from './Components/Sidebar/Sidebar';
 import AllTickets from './Components/AllTickets/AllTickets';
 import MyTickets from './Components/MyTickets/MyTickets';
-import ScheduledCalls from './Components/ScheduledCalls/ScheduledCalls'
+import ScheduledCalls from './Components/ScheduledCalls/ScheduledCalls';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import CreateTicket from './Components/CreateTickets/CreateTickets';
 

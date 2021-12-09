@@ -1,33 +1,45 @@
 import app from '../../firebase';
+import { getDatabase, ref, set } from "firebase/database";
 import React, {useState} from 'react';
 import '../../App.css';
 import './CreateTickets.css'
 import SearchBar from '../SearchBar/SearchBar';
 import TextBoxes from '../SearchBar/TextBoxes';
 import Forms from '../SearchBar/Forms';
-import { getDatabase, ref, set } from "firebase/database";
 
 function CreateTicket() {
+    const _ = require("lodash");
 
-    const [name , setName] = useState();
-    const [age , setAge] = useState();
-
-    function writeTicket() {
+    const [data, setData] = useState({
+      name: "",
+      position: "",
+      email: "",
+      phoneNumber: "",
+    })
+    
+    function writeTicket(){
         const db = getDatabase();
-        set(ref(db, 'users/' ), {
-          name: name,
-          age: age,
-        });
-      }
+        set(ref(db, _.uniqueId('Ticket-')), {
+          name: data.name,
+          position: data.position,
+          email: data.email,
+          phoneNumber: data.phoneNumber,
+        })
+    }
+
+    const handleInput = (e) => {
+        setData({
+          ...data,
+          [e.target.name]: e.target.value,
+        })
+    }
 
     return (
         <div class='CreateTickets'>
             <SearchBar placeholder="Enter customer search string" />
-            <form onSubmit={writeTicket}>
-            <TextBoxes />
+            <TextBoxes onUpdate={handleInput} data={data}/>
             <Forms />
-            <button type='submit'>Submit</button>
-            </form>
+            <button onClick={e => writeTicket()}>Submit</button>
         </div>
     );
 }
