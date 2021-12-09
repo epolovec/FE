@@ -16,6 +16,14 @@ function CreateTicket() {
     const [phoneNumber , setPhoneNumber] = useState();
 
     function writeTicket() {
+    const [data, setData] = useState({
+      name: "",
+      position: "",
+      email: "",
+      phoneNumber: "",
+    })
+    
+    function writeTicket(){
         const db = getDatabase();
         set(ref(db, _.uniqueId('Ticket-')), {
           name: data.name,
