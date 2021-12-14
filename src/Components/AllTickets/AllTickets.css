@@ -1,0 +1,12 @@
+.ScheduledCalls {
+    width: 100%;
+    background-color: #333333;
+}
+
+.table-dark {
+    --bs-table-bg: #333333;
+}
+
+h1 {
+    color: white;
+}
